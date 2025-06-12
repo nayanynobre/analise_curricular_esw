@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Análise Curricular</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        padding: 6px;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .input-blank {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #000;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .auto-resize {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid black;
+        font-family: Arial, sans-serif; 
+        padding: 4px;
+        overflow-y: hidden;
+        resize: none;
+        min-height: 20px;
+    }
+    
+    .texto-vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .table.bloco-formulario {
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 24px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .bloco-formulario td {
+        border: none;
+        padding: 8px 4px;
+    }
+
+    .bloco-formulario tr:not(:last-child) td {
+        border-bottom: 1px solid #eee;
+    }
+
+    .center { text-align: center; }
+    .bold { font-weight: bold; }
+    .col-label { background-color: white; }
+
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid black;
+        padding: 6px;
+    }
+    
+</style>
+</head>
+<body>
+
+<h2 class="center">ANÁLISE CURRICULAR</h2>
+
+<table>
+    <tr>
+        <td class="bold col-label" >CURSO:</td>
+        <td colspan="5"><input type="text" size="100" maxlength="200"></td>
+        <td class="bold col-info">AASS:</td>
+        <td colspan="2"><input type="text" size="100" maxlength="100"></td>
+    </tr>
+    <tr>
+        <td class="bold">ALUNO(A):</td>
+        <td colspan="5"><input type="text" size="100" maxlength="200"></td>
+        <td class="bold">SÉRIE/PERÍODO:</td>
+        <td colspan="2"><input type="text" size="100" maxlength="100"></td>
+    </tr>
+    <tr class="linha-alta">
+        <td class="bold">IES DE ORIGEM:</td>
+        <td colspan="8"><input type="text" size="228" maxlength="300"></td>
+    </tr>
+    <tr>
+        <td class="bold">CURSO DE ORIGEM:</td>
+        <td colspan="8"><input type="text" size="228" maxlength="200"></td>
+    </tr>
+</table>
+
+<table>
+    <thead>
+    <tr>
+        <th colspan="3" class="center" style="height: 10px;">GRADE DO CURSO Universidade de Vassouras</th>
+        <th colspan="8" class="center" style="height: 10px;">DISCIPLINAS CURSADAS na IES de origem para aproveitamento</th>
+    </tr>
+    <tr>
+        <th rowspan="2" style="width: 50px;" class="center"></th>
+        <th rowspan="2" style="width: 250px;" class="center">Disciplinas</th>
+        <th rowspan="2" style="width: 40px;">Carga Horária</th>
+        <th rowspan="2" style="width: 50px;" class="center">Disciplinas Cursadas</th>
+        <th rowspan="2" style="width: 50px;" class="center">Período</th>
+        <th rowspan="2" style="width: 40px;" class="center">Carga Horária</th>
+        <th rowspan="2" style="width: 40px;" class="center">Carga Horária Excedente</th>
+        <th rowspan="2" style="width: 40px;" class="center">Carga Horária Insuficiênte</th>
+        <th colspan="2" class="center" style="height: 10px;">ISENTO</th>
+        <th rowspan="2" style="width: 20px; height: 10px;" class="center">OBS</th>
+    </tr>
+    
+    <tr>
+        <th style="width: 50px;" class="center">SIM</th>
+        <th style="width: 50px;" class="center">NÃO</th>
+    </tr>
+    </thead>
+
+    <!-- 1° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="6" style="width: 5px;" class="center texto-vertical">1° Período</th>
+        <td>Pensamento Computacional</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Introdução a Química</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Resolução de Problemas para Engenharia I</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Introdução a Engenharia</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Expressão Gráfica</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Práticas Extensionistas Integradoras I</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <!-- 2° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="7" style="width: 10px;" class="center texto-vertical">2° Período</th>
+        <td>Gestão Empresarial</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Algoritmos</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Ética, Cidadania e Sociedade</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Prática de Leitura e Produção Textual</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Engenharia de Requisitos e Análise de Sistemas</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Programação de Web Sites</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+    <td>Práticas Extensionistas Integradoras II</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+        
+    <!-- 3° PERÍODO -->
+    
+    <tr>
+    <th id="periodo-header" rowspan="6" style="width: 10px;" class="center texto-vertical">3° Período</th>
+        <td>Física para Engenharia I</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Engenharia Econômica</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Estrutura de Dados</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Programação Front End</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Programação Orientada a Objetos</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Práticas Extensionistas Integradoras III</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <!-- 4° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="8" style="width: 10px;" class="center texto-vertical">4° Período</th>
+        <td>Empreendedorismo e Inovação</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Gestão Ambiental e Desenvolvimento Sustentável</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Estrutura de Dados Avançadas</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Processo de Desenvolvimento de Software</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Infraestrutura de TI para Engenharia de Software</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Interface Humano-Computador</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Banco de Dados Relacionais</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Práticas Extensionistas Integradoras IV</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <!-- 5° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="6" style="width: 10px;" class="center texto-vertical">5° Período</th>
+        <td>Resistência dos Materiais</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Banco de Dados Não Relacionais</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Internet das Coisas</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Programação Back End</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Arquitetura e Projeto de Software</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Práticas Extensionistas Integradoras V</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <!-- 6° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="6" style="width: 10px;" class="center texto-vertical">6° Período</th>
+        <td>Probabilidade e Estatística</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Fenômeno de Transportes</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Introdução a Eficiência Energética</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Tecnologia e Ciência dos Materiais</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Programação Full Stack</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Práticas Extensionistas Integradoras VI</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <!-- 7° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="7" style="width: 10px;" class="center texto-vertical">7° Período</th>
+        <td>Gestão da Manutenção e Evolução de Software</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Gestão da Qualidade e Teste de Software</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Direito e Ética de Computação</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Segurança e Auditoria de Software</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Desenvolvimento de Aplicativos Híbridos</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Desenvolvimento de Jogos Digitais</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Projeto Final de Curso I</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <!-- 8° PERÍODO -->
+    
+    <tr>
+        <th id="periodo-header" rowspan="7" style="width: 10px;" class="center texto-vertical">8° Período</th>
+        <td>Gestão de Projetos, Governança e Estimativas em TI</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Inteligência Artificial e Machine Learning</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Ciência de Dados</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Laboratório de Desenvolvimento de Aplicativos Nativos</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Complexidade de Algoritmos</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Engenharia de Software Contínua e Experimental</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    <tr>
+        <td>Projeto Final de Curso II</td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><textarea class="auto-resize" rows="1"></textarea></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="text" size="1" maxlength="4"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="radio" name="isento_1"></td>
+        <td class="center"><input type="text" size="10"></td>
+    </tr>
+
+    </table>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const textareas = document.querySelectorAll('.auto-resize');
+
+    function autoResize() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+        this.style.width = 'auto';
+        this.style.width = this.scrollWidth + 'px';
+    }
+
+    textareas.forEach(textarea => {
+        textarea.addEventListener('input', autoResize, false);
+        autoResize.call(textarea); 
+    });
+});
+</script>
+
+</body>
+
+</html>
