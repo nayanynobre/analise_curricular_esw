@@ -48,14 +48,14 @@
         resize: none;
         min-height: 20px;
     }
-    
+
     .texto-vertical {
         writing-mode: vertical-rl;
         text-orientation: mixed;
         vertical-align: middle;
         text-align: center;
     }
-
+    
     .table.bloco-formulario {
         width: 100%;
         border: 1px solid #999;
@@ -90,9 +90,10 @@
 </head>
 <body>
 
-<h2 class="center">ANÁLISE CURRICULAR</h2>
-
 <table>
+    <tr>
+        <td colspan="10" class="center bold col-label">ANÁLISE CURRICULAR</td>
+    </tr>
     <tr>
         <td class="bold col-label" >CURSO:</td>
         <td colspan="5"><input type="text" size="100" maxlength="200"></td>
@@ -124,7 +125,7 @@
     <tr>
         <th rowspan="2" style="width: 50px;" class="center"></th>
         <th rowspan="2" style="width: 250px;" class="center">Disciplinas</th>
-        <th rowspan="2" style="width: 40px;">Carga Horária</th>
+        <th rowspan="2" style="width: 40px;" class="center">Carga Horária</th>
         <th rowspan="2" style="width: 50px;" class="center">Disciplinas Cursadas</th>
         <th rowspan="2" style="width: 50px;" class="center">Período</th>
         <th rowspan="2" style="width: 40px;" class="center">Carga Horária</th>
@@ -853,10 +854,34 @@
         <td class="center"><input type="text" size="10"></td>
     </tr>
 
-    </table>
+</table>
+
+<div style="text-align: right; margin-bottom: 20px; font-size: 14px;">
+        Saguarema-RJ, <span id="current-date"></span>
+    </div>
+    
+    <div style="margin-bottom: 30px; font-size: 14px;">
+            _____________________________<br>
+            Visto do Coordenador do Curso
+    </div>
+    
+    <div style="margin-bottom: 30px; font-size: 14px; text-align: justify;">
+        É de total responsabilidade do discente o cumprimento das disciplinas determinadas pela análise curricular para fins de integralização, computo de carga horário e de disciplinas obrigatórias da grade do Curso da Universidade de Vassouras. Procurar a secretaria geral no início do semestre para verificar e dar ciente nos processos de isenção de disciplinas.
+    </div>
+    
+    <div style="display: flex; justify-content: space-between; margin-bottom: 40px; font-size: 14px;">
+        <div>
+            _____________________________<br>
+            Ciente de Aluno
+        </div>
+        <div>
+            Data: ____/____/____
+    </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Função para auto-redimensionar áreas de texto
     const textareas = document.querySelectorAll('.auto-resize');
 
     function autoResize() {
@@ -870,6 +895,31 @@ document.addEventListener('DOMContentLoaded', function() {
         textarea.addEventListener('input', autoResize, false);
         autoResize.call(textarea); 
     });
+
+    // Função para formatar a data atual
+    function formatDate(date) {
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+    
+    // Função para formatar a data por extenso
+    function formatLongDate(date) {
+        const day = date.getDate();
+        const month = date.toLocaleDateString('pt-BR', { month: 'long' });
+        const year = date.getFullYear();
+        return `${day} de ${month.charAt(0).toUpperCase() + month.slice(1)} de ${year}`;
+    }
+    
+    // Atualizar as datas no documento
+    const now = new Date();
+    if(document.getElementById('current-date')) {
+        document.getElementById('current-date').textContent = formatLongDate(now);
+    }
+    if(document.getElementById('current-date-short')) {
+        document.getElementById('current-date-short').textContent = formatDate(now);
+    }
 });
 </script>
 
