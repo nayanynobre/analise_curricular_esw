@@ -1,0 +1,207 @@
+:root {
+  --primary-font: "Roboto", Arial, sans-serif;
+  --bg-color: #f4f7f9;
+  --page-bg-color: #ffffff;
+  --border-color: #bebebe;
+  --border-accent-color: #7a7a7a;
+  --header-bg-color: #6c757d;
+  --sub-header-bg-color: #edf2f7;
+  --label-bg-color: #f7fafc;
+  --text-color: #000000;
+  --text-light-color: #ffffff;
+  --focus-color: #4299e1;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+.page-container {
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--page-bg-color);
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  border-radius: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+td,
+th {
+  border: 1px solid var(--border-color);
+  padding: 0.6rem;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.8rem;
+}
+
+.student-info-table td {
+  border: 1px solid var(--border-color);
+}
+
+.student-info-table .header-title {
+  background-color: var(--header-bg-color);
+  color: var(--text-light-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.student-info-table .label {
+  background-color: var(--label-bg-color);
+  font-weight: 500;
+}
+
+.main-table thead .main-header th {
+  background-color: var(--header-bg-color);
+  color: var(--text-light-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.main-table thead .sub-header th {
+  background-color: var(--sub-header-bg-color);
+  font-weight: 500;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.period-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  background-color: var(--label-bg-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+}
+
+.main-table tbody tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+input[type="text"],
+.auto-resize {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-family: var(--primary-font);
+  padding: 4px;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+.auto-resize:focus {
+  outline: none;
+  border-bottom-color: var(--focus-color);
+  background-color: #f0f8ff;
+}
+
+.auto-resize {
+  overflow-y: hidden;
+  resize: none;
+  min-height: 24px;
+  line-height: 1.5;
+}
+
+.center {
+  text-align: center;
+}
+
+.center input[type="text"],
+.center .auto-resize {
+  text-align: center;
+}
+
+.footer-section {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.date-line {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.signature-block {
+  margin-bottom: 2.5rem;
+}
+
+.signature-line {
+  border-top: 1px solid var(--text-color);
+  padding-top: 0.5rem;
+  display: inline-block;
+  width: 250px;
+}
+
+.disclaimer {
+  text-align: justify;
+  margin-bottom: 2.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.final-signature {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#export-pdf-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--header-bg-color);
+  color: var(--text-light-color);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 2rem;
+}
+
+#export-pdf-btn:hover {
+  background-color: #4a5568;
+}
+
+@media print {
+  body {
+    background-color: #fff;
+    padding: 0;
+  }
+  .page-container {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+  #export-pdf-btn {
+    display: none;
+  }
+  input[type="text"],
+  .auto-resize {
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  .main-table thead {
+    display: table-header-group;
+  }
+}
